@@ -1,0 +1,10 @@
+.cell {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.center {
+  background-color: red;
+}
