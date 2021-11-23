@@ -35,7 +35,7 @@ function GameProvider({ children }) {
       rowIndex: Math.floor(rowLength / 2),
       colIndex: Math.floor(colLength / 2),
     };
-    const greenSprite = generateRandomPair(center.rowIndex, center.colIndex);
+    const greenSprite = generateRandomPair({ rowLength, center });
     setGameDimension({ rowLength, colLength, center });
     setGreenSprite(greenSprite);
   }, []);

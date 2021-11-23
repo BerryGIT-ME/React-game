@@ -3,7 +3,7 @@ import Row from "../Row/Row";
 import { useGame, withGameContext } from "../../context/useGameContext";
 
 function GameBoard() {
-  const { gameDimension } = useGame();
+  const { gameDimension, greenSprite } = useGame();
   const rows = new Array(gameDimension.rowLength).fill(0);
   return (
     <div>
