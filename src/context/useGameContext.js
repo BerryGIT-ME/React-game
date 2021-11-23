@@ -22,7 +22,7 @@ function GameProvider({ children }) {
   useEffect(() => {
     const handlekeydown = (e) => {
       const gameDimensionCopy = { ...gameDimension };
-      const center = moveCenter(gameDimensionCopy, e.key);
+      const newCenter = moveCenter(gameDimensionCopy, e.key);
 
       const { rowIndex, colIndex } = gameDimensionCopy.center;
       const { greenSpriteRow, greenSpriteCol } = { ...greenSprite };
@@ -47,7 +47,7 @@ function GameProvider({ children }) {
       if (greenSpriteCol.length === 0)
         alert(`you have completed the game in ${moveCount} moves`);
       setGreenSprite({ greenSpriteRow, greenSpriteCol });
-      setGameDimension({ ...gameDimension, center });
+      setGameDimension({ ...gameDimension, center: newCenter });
     };
 
     // event handler for moving the sprites in the game
@@ -56,7 +56,7 @@ function GameProvider({ children }) {
     return () => {
       document.removeEventListener("keydown", handlekeydown);
     };
-  }, [gameDimension]);
+  }, [gameDimension, greenSprite, moveCount]);
 
   useEffect(() => {
     let rowLength, colLength;
