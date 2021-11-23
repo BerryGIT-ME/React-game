@@ -5,6 +5,7 @@ import generateRandomPairs, { isDuplicate } from "./../utils/randomPair";
 const GameContext = createContext();
 
 function GameProvider({ children }) {
+  const [moveCount, setMoveCount] = useState(0);
   const [greenSprite, setGreenSprite] = useState({
     greenSpriteRow: [],
     greenSpriteCol: [],
@@ -39,10 +40,16 @@ function GameProvider({ children }) {
         greenSpriteRow.splice(matchIndex, 1);
         greenSpriteCol.splice(matchIndex, 1);
       }
+      const validMoves = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+      if (validMoves.includes(e.key))
+        setMoveCount((moveCount) => moveCount + 1);
 
+      if (greenSpriteCol.length === 0)
+        alert(`you have completed the game in ${moveCount} moves`);
       setGreenSprite({ greenSpriteRow, greenSpriteCol });
       setGameDimension({ ...gameDimension, center });
     };
+
     // event handler for moving the sprites in the game
     document.addEventListener("keydown", handlekeydown);
 

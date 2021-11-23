@@ -6,9 +6,13 @@
 }
 
 .center {
-  background-color: red;
+  background-image: url("./../img/redSprite.jpg");
+  object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 .green-sprite {
-  background-color: green;
+  background-image: url("./../img/greenSprite.jpg");
+  object-fit: cover;
+  background-repeat: no-repeat;
 }
