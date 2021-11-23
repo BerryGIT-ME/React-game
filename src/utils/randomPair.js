@@ -1,4 +1,4 @@
-export default function generateRandomPair({ rowLength, center }) {
+export default function generateRandomPairs({ rowLength, center }) {
   const greenSpriteRow = new Array(rowLength);
   const greenSpriteCol = new Array(rowLength);
 
@@ -38,7 +38,7 @@ function getRandomValues(upperLimit, forbiddenRow, forbiddenCol) {
   return [randRow, randCol];
 }
 
-function isDuplicate(row, col, forbiddenRow, forbiddenCol) {
+export function isDuplicate(row, col, forbiddenRow, forbiddenCol) {
   for (let i = 0; i < forbiddenCol.length; i++)
     if (forbiddenCol[i] === col && forbiddenRow[i] === row) return true;
 
