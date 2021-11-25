@@ -6,7 +6,7 @@ export default function generateRandomPairs({ rowLength, center }) {
   const forbiddenCol = [center.colIndex];
 
   for (let i = 0; i < rowLength; i++) {
-    // generate random values for the green sprites
+    // generate random values for the green sprite's location
     let [randRow, randCol] = getRandomValues(
       rowLength,
       forbiddenRow,
