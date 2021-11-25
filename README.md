@@ -1,7 +1,7 @@
 # simple game with react
 
 ### Start the app
-run `npm install` to install projec dependencies
+run `npm install` to install project dependencies,
 run `npm start` to start the local server
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
