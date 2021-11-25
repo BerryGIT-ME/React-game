@@ -1,6 +1,7 @@
 # simple game with react
 
-### `run npm start`
+### Start the app
+run `npm start`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
